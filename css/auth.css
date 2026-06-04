@@ -1,0 +1,16 @@
+body {
+    font-family: Arial, sans-serif;
+}
+
+input:focus {
+    outline: none;
+    border-color: #F28C38;
+}
+
+button {
+    transition: 0.3s ease;
+}
+
+button:hover {
+    transform: translateY(-1px);
+}

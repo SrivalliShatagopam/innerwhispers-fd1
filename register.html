@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="css/auth.css">
+</head>
+
+<body class="bg-gray-100 flex justify-center items-center min-h-screen px-4">
+
+    <div class="bg-white p-8 rounded-xl shadow-lg w-full max-w-md">
+
+        <h1 class="text-3xl font-bold text-center text-orange-500">
+            InnerWhispers
+        </h1>
+
+        <p class="text-center text-gray-500 mt-2 mb-6">
+            Create Account
+        </p>
+
+        <form id="registerForm">
+
+            <label class="block mb-1">Full Name</label>
+            <input id="name" type="text"
+                class="w-full border p-3 rounded mb-1">
+            <p id="nameError" class="text-red-500 text-sm mb-2"></p>
+
+            <label class="block mb-1">Email</label>
+            <input id="email" type="email"
+                class="w-full border p-3 rounded mb-1">
+            <p id="emailError" class="text-red-500 text-sm mb-2"></p>
+
+            <label class="block mb-1">Password</label>
+            <input id="password" type="password"
+                class="w-full border p-3 rounded mb-1">
+            <p id="strengthText"
+                class="text-sm mb-2 font-medium"></p>
+
+            <div class="w-full bg-gray-200 rounded-full h-2 mb-3">
+                <div
+                id="strengthBar"
+                class="h-2 rounded-full transition-all duration-300">
+                </div>
+            </div>
+
+            <p id="passwordError"
+                class="text-red-500 text-sm mb-2"></p>
+
+            <label class="block mb-1">Confirm Password</label>
+            <input id="confirmPassword" type="password"
+                class="w-full border p-3 rounded mb-1">
+
+            <p id="confirmError"
+                class="text-red-500 text-sm mb-4"></p>
+            <button
+                id="registerBtn"
+                type="submit"
+                class="w-full bg-orange-500 text-white p-3 rounded hover:bg-orange-600">
+                Create Account
+            </button>
+
+        </form>
+
+        <p class="text-center mt-4">
+            Already have an account?
+            <a href="login.html"
+                class="text-orange-500 font-medium">
+                Login
+            </a>
+        </p>
+
+    </div>
+
+    <script src="js/register.js"></script>
+
+</body>
+</html>

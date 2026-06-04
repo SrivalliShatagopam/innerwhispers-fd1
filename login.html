@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>InnerWhispers Login</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link rel="stylesheet" href="css/auth.css">
+</head>
+
+<body class="bg-gray-100 flex justify-center items-center min-h-screen px-4">
+
+    <div class="bg-white p-8 rounded-xl shadow-lg w-full max-w-md">
+
+        <h1 class="text-3xl font-bold text-center text-orange-500">
+            InnerWhispers
+        </h1>
+
+        <p class="text-center text-gray-500 mt-2 mb-6">
+            AI Wellness Companion
+        </p>
+
+        <form id="loginForm">
+
+            <!-- Email -->
+            <label class="block mb-2 font-medium">
+                Email
+            </label>
+
+            <input
+                id="email"
+                type="email"
+                placeholder="Enter your email"
+                class="w-full border p-3 rounded mb-1"
+            >
+
+            <p id="emailError" class="text-red-500 text-sm mb-3"></p>
+
+            <!-- Password -->
+            <label class="block mb-2 font-medium">
+                Password
+            </label>
+
+            <input
+                id="password"
+                type="password"
+                placeholder="Enter your password"
+                class="w-full border p-3 rounded mb-1"
+            >
+
+            <p id="passwordError" class="text-red-500 text-sm mb-3"></p>
+
+            <!-- Remember Me + Forgot Password -->
+            <div class="flex justify-between items-center mb-5">
+
+                <label class="flex items-center gap-2 text-sm">
+                    <input
+                        type="checkbox"
+                        id="rememberMe"
+                    >
+                    Remember Me
+                </label>
+                <a
+                    href="forgot-password.html"
+                    class="text-orange-500 text-sm hover:underline"
+                >
+                    Forgot Password?
+                </a>
+
+            </div>
+
+            <!-- Login Button -->
+            <button
+                id="loginBtn"
+                type="submit"
+                class="w-full bg-orange-500 text-white p-3 rounded hover:bg-orange-600 transition"
+            >
+                Login
+            </button>
+
+        </form>
+
+        <p class="text-center mt-5 text-gray-600">
+            Don't have an account?
+
+            
+        <a href="register.html"
+            class="text-orange-500 font-medium hover:underline">
+            Register
+        </a>
+        </p>
+
+    </div>
+
+<script src="js/login.js"></script>
+
+</body>
+</html>
