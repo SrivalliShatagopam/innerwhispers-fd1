@@ -1,10 +1,13 @@
 body {
     font-family: Arial, sans-serif;
+    background-color: #F2EDE8;
+    color: #2C2C2C;
 }
 
-input:focus {
+input:focus,
+textarea:focus {
     outline: none;
-    border-color: #F28C38;
+    border-color: #E8724A;
 }
 
 button {
