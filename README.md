@@ -25,7 +25,7 @@ Frontend Authentication and Profile Module for the InnerWhispers Wellness Compan
 ## Design System
 
 - Primary Color: #E8724A
-- Background: #F2EDE8
+- Background: #F2F0EE
 - Cards: #FFFFFF
 - Primary Text: #2C2C2C
 - Muted Text: #9A9080
