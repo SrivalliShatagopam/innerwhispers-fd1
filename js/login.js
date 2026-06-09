@@ -1,6 +1,6 @@
 const form = document.getElementById("loginForm");
 
-form.addEventListener("submit", function (e) {
+form.addEventListener("submit", async function (e) {
 
     e.preventDefault();
 
@@ -9,6 +9,7 @@ form.addEventListener("submit", function (e) {
 
     const emailError = document.getElementById("emailError");
     const passwordError = document.getElementById("passwordError");
+    const loginBtn = document.getElementById("loginBtn");
 
     emailError.textContent = "";
     passwordError.textContent = "";
@@ -25,21 +26,54 @@ form.addEventListener("submit", function (e) {
         valid = false;
     }
 
-    if (valid) {
+    if (!valid) {
+        return;
+    }
 
-        const loginBtn = document.getElementById("loginBtn");
+    try {
 
-        loginBtn.textContent = "Logging in...";
         loginBtn.disabled = true;
+        loginBtn.textContent = "Logging in...";
 
-        setTimeout(() => {
+        const result = await loginUser(
+            email,
+            password
+        );
 
-            alert("Login Successful");
+        localStorage.setItem(
+            "accessToken",
+            result.access_token
+        );
 
-            loginBtn.textContent = "Login";
-            loginBtn.disabled = false;
+        localStorage.setItem(
+            "refreshToken",
+            result.refresh_token
+        );
 
-        }, 2000);
+        localStorage.setItem(
+            "user",
+            JSON.stringify(result.user)
+        );
+
+        alert(
+            `Welcome ${result.user.name}`
+        );
+
+        window.location.href = "profile.html";
+
+    }
+
+    catch (error) {
+
+        passwordError.textContent =
+            error.message;
+
+    }
+
+    finally {
+
+        loginBtn.disabled = false;
+        loginBtn.textContent = "Login";
 
     }
 
